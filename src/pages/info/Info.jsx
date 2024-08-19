@@ -117,38 +117,26 @@ const colors = {
   '-2': { color: 'red', background: '#acc8ba'},
 }
 
-const initialFilter = {
-  sort: 'status',
-  order: 'descending'
+const initialFilter = {sort: 'status', order: 'descending'}
+
+const sorter =  (filter, array) => {
+  const sortedArray = [...array];
+  sortedArray.sort((a, b) => a[filter.sort] - b[filter.sort]);
+  if (filter.order === 'descending') sortedArray.reverse();
+  return sortedArray;
 }
 
-const createSorter = () => {
-  let internalFilter = initialFilter
-  return (filter, array) => {
-    if (filter.sort !== internalFilter.sort) {
-      console.log('sorting')
-      array.sort((a, b) => a[filter.sort] - b[filter.sort]);
-      internalFilter.sort = filter.sort
-    }
-    if (filter.order !== internalFilter.order) {
-      console.log('reversing')
-      array.reverse()
-      internalFilter.order = filter.order
-    }
-    return array
-  }
-}
-
-const sorter = createSorter()
 
 const Info = () => {
-  const [logs, setLogs] = useState(initialLogs)
+  const [logs, setLogs] = useState(sorter(initialFilter, initialLogs))
   const [sort, setSort] = useState(initialFilter.sort);
   const [order, setOrder] = useState(initialFilter.order)
 
   useEffect(() => {
-    console.log(order, sort)
-    setLogs( prev => sorter({sort, order}, prev) )
+    setLogs( prev => {
+      const newArr = sorter({sort, order}, prev) 
+      console.log(newArr);
+      return newArr }) 
   }, [order, sort])
 
   return (
@@ -160,7 +148,7 @@ const Info = () => {
         </div>
       </header>
       <ul>
-        {logs &&
+        {
           logs.map((log, i) => 
             <li key={i} style={{ color: colors[log.status].color, background: colors[log.status].background}}>
               {formatDistanceToNowStrict(fromUnixTime(log.time), { addSuffix: true})}, 
@@ -169,6 +157,7 @@ const Info = () => {
             </li>)
         }
       </ul>
+      
     </div>
   )
 }
