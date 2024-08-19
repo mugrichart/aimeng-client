@@ -9,6 +9,7 @@ import Dashboard from './pages/dashboard/Dashboard';
 import Info from './pages/info/Info';
 
 function App() {
+  localStorage.setItem('token', 'just for now')
 
   return (
     <div className="App">
