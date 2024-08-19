@@ -1,25 +1,28 @@
 
 .plants {
     display: flex;
-    gap: 15vw;
     width: 100%;
     padding: 2vw;
+    gap: 5vw
 }
 
 .plants--container {
     display: flex;
     flex-direction: column;
-    background: var(--primary-light-200);
-    padding: 1vw;
+    background: var(--primary-light-100);
+    padding: 1vw 3vw;
     gap: 1rem;
     border-radius: 1rem;
+    height: 83vh;
+    overflow: auto;
 }
 
 .plants--container .plant {
-    width: 7vw;
+    width: 10vw;
     aspect-ratio: 1;
     border-radius: 1rem;
     cursor: pointer;
+    border: 1px solid var(--primary-light-400);
 }
 
 .plants--container .plant:hover {
@@ -34,7 +37,7 @@
 
 .plant-stats > div {
     display: flex;
-    gap: 10vw;
+    gap: 3rem;
 }
 
 .plant-stats  ul {

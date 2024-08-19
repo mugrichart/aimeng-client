@@ -1,15 +1,16 @@
 
 header {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 nav {
     background: var(--primary-light-200);
     padding-inline: 10em;
-    border-radius: 2em;
+    /* border-radius: 2em; */
     display: flex;
+    justify-content: center;
 }
 
 nav > * {
