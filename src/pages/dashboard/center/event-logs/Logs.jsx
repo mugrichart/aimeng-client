@@ -1,20 +1,22 @@
 
 
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom'
 
 const initialLogs = [
     'Today at 12:45 hardware 1 was initiated successfully',
     'Today at 03:45 admin 3 attempted multiple failed logins'
 ]
 const Logs = () => {
+  const navigate = useNavigate()
   return (
-    <div className='logs'>
+    <div className='logs' onClick={() => navigate('info')}>
       <h3>Event Logs</h3>
-      <div>
+      <ul>
         {
-            initialLogs.map(log => <div className='log'>{log}</div>)
+            initialLogs.map((log, i) => <li key={i} className='log'>{log}</li>)
         }
-      </div>
+      </ul>
     </div>
   )
 }

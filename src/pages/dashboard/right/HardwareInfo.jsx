@@ -29,7 +29,7 @@ const HardwareInfo = () => {
   };
 
   return (
-    <div>
+    <div className='hardwareInfo'>
       <h3>Hardware info</h3>
       <FormGroup className="form">
         {hardware.map((hw, index) => (

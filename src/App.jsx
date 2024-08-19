@@ -7,6 +7,7 @@ import ProtectedRoute from './ProtectedRoute';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Dashboard from './pages/dashboard/Dashboard';
 import Info from './pages/info/Info';
+import Plants from './pages/plants/Plants';
 
 function App() {
   localStorage.setItem('token', 'just for now')
@@ -34,6 +35,7 @@ const Workspace = () => {
         <Route path='' element={ <Dashboard /> } />
         <Route path='info' element={ <Info /> } />
         <Route path='record' element={ <Dashboard /> } />
+        <Route path='plants' element={ <Plants /> } />
       </Routes>
     </main>
   </div>

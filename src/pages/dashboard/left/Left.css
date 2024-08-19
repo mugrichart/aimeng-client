@@ -6,11 +6,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 2rem;
 }
 
-.left > .avatar {
-    height: 15vh;
+.left div {
+    text-align: center;
+}
+
+.left img {
+    height: 10vh;
     aspect-ratio: 1;
     background-color: white;
     border: 1px solid var(--primary-light-300);
@@ -20,7 +24,7 @@
 .left > ul {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1rem;
 }
 
 .left > ul > li {

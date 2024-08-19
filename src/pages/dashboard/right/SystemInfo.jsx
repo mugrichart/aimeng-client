@@ -17,13 +17,13 @@ const system = [
 
 const SystemInfo = () => {
   return (
-    <div>
+    <div className='systemInfo'>
         <h3>System info</h3>
-        <div className="form">
+        <ul className="form">
             {
-                system.map(sys => <span>{sys.name} -- {sys.data}</span>)
+                system.map((sys, i) => <li key={i}>{sys.name} -- {sys.data}</li>)
             }
-        </div>
+        </ul>
       
     </div>
   )

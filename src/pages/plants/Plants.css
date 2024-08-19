@@ -1,0 +1,66 @@
+
+.plants {
+    display: flex;
+    gap: 15vw;
+    width: 100%;
+    padding: 2vw;
+}
+
+.plants--container {
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-light-200);
+    padding: 1vw;
+    gap: 1rem;
+    border-radius: 1rem;
+}
+
+.plants--container .plant {
+    width: 7vw;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.plants--container .plant:hover {
+    box-shadow: 0 0 2rem var(--primary-light-400);
+}
+
+.plant-stats {
+    padding: 1rem 5rem;
+    border-radius: 2rem;
+    background-color: var(--primary-light-100);
+}
+
+.plant-stats > div {
+    display: flex;
+    gap: 10vw;
+}
+
+.plant-stats  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.plant-stats h3 {
+    font-family: "Matemasie", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+    color: var(--primary-light-500);
+    margin: 2rem;
+}
+
+.plant-stats  li {
+    list-style-type: circle;
+    list-style-position: inside;
+    color: var(--primary-neutral-light-400);
+    
+}
+
+.plant-stats > div:first-child > *:first-child {
+    box-shadow: 0 0 1rem var(--primary-neutral-light-300);
+    border-radius: 2rem;
+}
