@@ -1,0 +1,32 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --backg-light: white;
+  --backg-dark: black;
+
+  --primary-light-100: hsl(147, 30%, 85%);
+  --primary-light-200: hsl(147, 50%, 75%);
+  --primary-light-300: hsl(150, 68%, 48%);
+  --primary-light-400: hsl(150, 84%, 32%);
+  --primary-light-500: hsl(150, 92%, 15%);
+  
+
+  --primary-neutral-light-100: hsl(151, 28%, 84%);
+  --primary-neutral-light-200: hsl(152, 12%, 59%);
+  --primary-neutral-light-300: hsl(150, 15%, 32%);
+  --primary-neutral-light-400: hsl(151, 32%, 18%);
+  --primary-neutral-light-500: hsl(151, 63%, 5%);
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+

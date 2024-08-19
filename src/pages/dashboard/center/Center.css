@@ -1,0 +1,57 @@
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.center > .graph {
+    background-color: var(--primary-light-100);
+    border-radius: 2vw;
+    padding: 2vw;
+    box-shadow: 0 0 5vw var(--primary-neutral-light-300);
+}
+
+.center > .logs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.logs > h3 {
+    background-color: var(--primary-light-500);
+    padding: 0 6vw;
+    border-radius: 2vw;
+    position: absolute;
+    transform: translateY(-50%);
+    color: var(--primary-light-100);
+}
+
+.logs > div {
+    background-color: var(--primary-light-100);
+    border-radius: 2vw;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: .5vw;
+    box-shadow: 0 0 2vw var(--primary-neutral-light-200) inset;
+}
+
+.logs .log {
+    background: linear-gradient(to right, var(--primary-neutral-light-200), white);
+    border-radius: 2vw;
+    padding: .5rem;
+}
+
+.center > .graph {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.graph > .gauges {
+    display: flex;
+}
+

@@ -1,0 +1,19 @@
+.App {
+    height: 100dvh;
+    width: 100dvw;
+    background-color: var(--backg-light);
+}
+
+
+.work-space {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.work-space > header {
+    height: 70px;
+}
+.work-space > main {
+    flex: 1;
+}
