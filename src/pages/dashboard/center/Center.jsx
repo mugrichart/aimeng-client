@@ -3,7 +3,7 @@
 import React from 'react';
 import './Center.css'
 
-import Logs from './logs/Logs';
+import Logs from './event-logs/Logs';
 import Graph from './graph/Graph';
 
 const Center = () => {
