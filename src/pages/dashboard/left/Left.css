@@ -33,6 +33,11 @@
     padding: .5em 1.5em;
     border-radius: 1em;
     color: var(--primary-light-100);
+    cursor: pointer;
+}
+
+.left > ul > li:hover {
+    box-shadow: 0 0 2rem var(--primary-light-400);
 }
 
 .clock {

@@ -3,14 +3,11 @@
 import React from 'react';
 import './Right.css';
 
-import HardwareInfo from './HardwareInfo';
-import SystemInfo from './SystemInfo';
 
-const Right = () => {
+const Right = ({ children }) => {
   return (
     <div className='right'>
-      <HardwareInfo />
-      <SystemInfo />
+      { children }
     </div>
   )
 }
